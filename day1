@@ -95,4 +95,3 @@ bench.py  hello.c  karthik.txt
 [root@localhost ~]# rm varma.txt
 rm: cannot remove 'varma.txt': No such file or directory
 [root@localhost ~]# rm karthik.txt
-[root@localhost ~]# ls
