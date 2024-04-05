@@ -1,0 +1,98 @@
+Loading...
+ 
+Welcome to Fedora 33 (riscv64)
+ 
+[root@localhost ~]# pwd
+/root
+[root@localhost ~]# whoami
+root
+[root@localhost ~]# date
+Fri Apr  5 06:26:02 PM UTC 2024
+[root@localhost ~]# date +%D
+04/05/24
+[root@localhost ~]# date +%T
+18:26:10
+[root@localhost ~]# date +%H
+18
+[root@localhost ~]# date +%Y
+2024
+[root@localhost ~]# date +%H:%M
+18:26
+[root@localhost ~]# ls
+bench.py  hello.c
+[root@localhost ~]# ls -lt
+total 8
+-rw-r--r-- 1 root root 114 Dec 26  2020 bench.py
+-rw-r--r-- 1 root root 185 Sep  9  2018 hello.c
+[root@localhost ~]# ls -lt
+total 8
+-rw-r--r-- 1 root root 114 Dec 26  2020 bench.py
+-rw-r--r-- 1 root root 185 Sep  9  2018 hello.c
+[root@localhost ~]# ls -ltr
+total 8
+-rw-r--r-- 1 root root 185 Sep  9  2018 hello.c
+-rw-r--r-- 1 root root 114 Dec 26  2020 bench.py
+[root@localhost ~]# ls -lth
+total 8.0K
+-rw-r--r-- 1 root root 114 Dec 26  2020 bench.py
+-rw-r--r-- 1 root root 185 Sep  9  2018 hello.c
+[root@localhost ~]# cat hello.c
+/* This C source can be compiled with:
+   gcc -o hello hello.c
+*/
+#include <stdlib.h>
+#include <stdio.h>
+ 
+int main(int argc, char **argv)
+{
+    printf("Hello World\n");
+    return 0;
+}
+[root@localhost ~]# less bench.py
+def fib(n):
+    if n < 2:
+        return n
+    return fib(n-2) + fib(n-1)
+ 
+ 
+n = 25
+print("fib(", n, ")= ", fib(n))
+...skipping...
+def fib(n):
+    if n < 2:
+        return n
+    return fib(n-2) + fib(n-1)
+ 
+n = 25
+def fib(n):
+    if n < 2:
+        return n
+    return fib(n-2) + fib(n-1)
+ 
+n = 25
+print("fib(", n, ")= ", fib(n))
+[root@localhost ~]# more hello.c
+/* This C source can be compiled with:
+   gcc -o hello hello.c
+*/
+#include <stdlib.h>
+#include <stdio.h>
+ 
+int main(int argc, char **argv)
+{
+    printf("Hello World\n");
+    return 0;
+}
+[root@localhost ~]# touch karthik.txt
+[root@localhost ~]# ls
+bench.py  hello.c  karthik.txt
+[root@localhost ~]# touch varma.txt
+[root@localhost ~]# ls
+bench.py  hello.c  karthik.txt  varma.txt
+[root@localhost ~]# rm varma.txt
+[root@localhost ~]# ls
+bench.py  hello.c  karthik.txt
+[root@localhost ~]# rm varma.txt
+rm: cannot remove 'varma.txt': No such file or directory
+[root@localhost ~]# rm karthik.txt
+[root@localhost ~]# ls
