@@ -1,0 +1,130 @@
+[root@localhost ~]# ls
+bench.py  hello.c  karthik.txt  varma.txt
+[root@localhost ~]# pwd
+/root
+[root@localhost ~]# mkdir class
+[root@localhost ~]# cd /class
+sh: cd: /class: No such file or directory
+[root@localhost ~]# cd class/
+[root@localhost class]# pwd
+/root/class
+[root@localhost class]# cd ..
+[root@localhost ~]# pwd
+/root
+[root@localhost ~]# ls
+bench.py  class  hello.c  karthik.txt  varma.txt
+[root@localhost ~]# rmdir class
+[root@localhost ~]# ls
+bench.py  hello.c  karthik.txt  varma.txt
+[root@localhost ~]# cd /
+[root@localhost /]# ls
+bin   dev  home  lib64       media  opt   root  sbin  sys  usr
+boot  etc  lib   lost+found  mnt    proc  run   srv   tmp  var
+[root@localhost /]# cd home
+[root@localhost home]# ls
+[root@localhost home]# cd..
+sh: cd..: command not found
+[root@localhost home]# cd ..
+[root@localhost /]# cd root/
+[root@localhost ~]# ls
+bench.py  hello.c  karthik.txt  varma.txt
+[root@localhost ~]# mkdir temp
+[root@localhost ~]# cp bench.py temp/
+[root@localhost ~]# cd temp/
+[root@localhost temp]# ls
+bench.py
+[root@localhost temp]# cd ..
+[root@localhost ~]# cd temp/
+[root@localhost temp]# cd ..hello.c .
+  GNU nano 5.3                        sort.txt                                  
+A
+K
+R
+T
+H
+I
+K
+X
+Y
+T
+Z
+W
+U
+M
+[root@localhost temp]# cat sort.txt
+A
+K
+R
+T
+H
+I
+K
+X
+Y
+T
+Z
+W
+U
+M
+  [root@localhost temp]# sort sort.txt
+A
+H
+I
+K
+K
+M
+R
+T
+T
+U
+W
+X
+Y
+Z
+  [root@localhost temp]# sort -r sort.txt
+Z
+Y
+X
+W
+U
+T
+T
+R
+M
+K
+K
+I
+H
+A
+[root@localhost temp]# sort sort.txt |uniq
+A
+H
+I
+K
+M
+R
+T
+U
+W
+Y
+Z
+[root@localhost temp]# split -7 sort.txt
+[root@localhost temp]# ls
+bench.py  hello.c  hello_copy.c  sort.txt  xaa  xab
+[root@localhost temp]# cat xaa
+A
+K
+R
+T
+H
+I
+K
+[root@localhost temp]# cat xab
+X
+Y
+T
+Z
+W
+U
+M
+
