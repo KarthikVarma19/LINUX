@@ -1,0 +1,54 @@
+[root@localhost ~]# ls
+bench.py  hello.c
+[root@localhost ~]# grep "fib" bench.py
+def fib(n):
+    return fib(n-2) + fib(n-1)
+print("fib(", n, ")= ", fib(n))
+[root@localhost ~]# grep "include|;" hello.c
+[root@localhost ~]# egrep "include|;" hello.c
+#include <stdlib.h>
+#include <stdio.h>
+    printf("Hello World\n");
+    return 0;
+[root@localhost ~]# touch file{1..10}
+[root@localhost ~]# ls
+bench.py  file10  file3  file5  file7  file9
+file1     file2   file4  file6  file8  hello.c
+[root@localhost ~]# ls f*
+file1  file10  file2  file3  file4  file5  file6  file7  file8  file9
+[root@localhost ~]# ls *.c
+hello.c
+[root@localhost ~]# ls *.bash
+ls: cannot access '*.bash': No such file or directory
+[root@localhost ~]# vi file1
+hi
+my name is karthik varma
+ganaraju
+[root@localhost ~]# vi file2
+hi
+my name is ranjith varma
+ganaraju
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+"file2" 3L, 37B written
+[root@localhost ~]# cmp file1 file2
+file1 file2 differ: byte 15, line 2
+[root@localhost ~]# diff file1 file2
+2c2
+< my name is karthik varma
+---
+> my name is ranjith varma
+4d3
+<
+[root@localhost ~]# diff -u file1 file2
+--- file1       2024-04-07 07:38:11.880000000 +0530				
++++ file2       2024-04-07 07:38:54.735000000 +0530
+@@ -1,4 +1,3 @@
+ hi
+-my name is karthik varma
++my name is ranjith varma
+ ganaraju   																
+-		
