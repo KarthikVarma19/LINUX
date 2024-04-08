@@ -1,0 +1,40 @@
+/*commands to find the location of the file in linux*/
+[root@localhost newfolder]#
+[root@localhost newfolder]# ls
+bench.py
+[root@localhost newfolder]# mkdir newfolder1
+[root@localhost newfolder]# cp ../bench.py .
+[root@localhost newfolder]# ls
+bench.py  newfolder1
+[root@localhost newfolder]# cd ..
+[root@localhost ~]# ls
+bench.py  hello.c  newfolder
+[root@localhost ~]# find . bench.py
+.
+./.bash_logout
+./.fldev_cfg
+./.tcshrc
+./.bashrc
+./.bash_profile
+./hello.c
+./.cshrc
+./bench.py
+./newfolder
+./newfolder/bench.py
+./newfolder/newfolder1
+bench.py
+[root@localhost ~]# sudo updatedb
+sudo: updatedb: command not found
+[root@localhost ~]# sudoapt updatedb
+sh: sudoapt: command not found
+[root@localhost ~]# locate *.py
+sh: locate: command not found
+[root@localhost ~]# locate bench.py
+sh: locate: command not found
+[root@localhost ~]# sudo updatedb
+sudo: updatedb: command not found
+[root@localhost ~]# cat "locate.py will search file in each directory"
+cat: 'locate.py will search file in each directory': No such file or directory
+[root@localhost ~]# echo "sudo updatedb" updates if we create new file now then
+we should tell the terminal to updatedb so sudo updatedb and then we use locate
+<file>"
