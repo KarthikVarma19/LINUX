@@ -1,0 +1,239 @@
+UTILITY COMMANDS
+[root@localhost ~]# cat typescript
+Script started on 2024-04-09 17:55:30+05:30 [TERM="linux" TTY="/dev/hvc0" COLUMN
+S="80" LINES="30"]
+sh-5.0# uptime
+ 17:55:45 up 0 min,  0 users,  load average: 0.19, 0.05, 0.02
+sh-5.0# cal
+     April 2024
+Su Mo Tu We Th Fr Sa
+    1  2  3  4  5  6
+ 7  8  9 10 11 12 13
+14 15 16 17 18 19 20
+21 22 23 24 25 26 27
+28 29 30
+ 
+sh-5.0# cal 2022
+   sh-5.0# cal 2022
+                               2022
+ 
+       January               February                 March
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+                   1          1  2  3  4  5          1  2  3  4  5
+ 2  3  4  5  6  7  8    6  7  8  9 10 11 12    6  7  8  9 10 11 12
+ 9 10 11 12 13 14 15   13 14 15 16 17 18 19   13 14 15 16 17 18 19
+16 17 18 19 20 21 22   20 21 22 23 24 25 26   20 21 22 23 24 25 26
+23 24 25 26 27 28 29   27 28                  27 28 29 30 31
+30 31
+        April                   May                   June
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+                1  2    1  2  3  4  5  6  7             1  2  3  4
+ 3  4  5  6  7  8  9    8  9 10 11 12 13 14    5  6  7  8  9 10 11
+10 11 12 13 14 15 16   15 16 17 18 19 20 21   12 13 14 15 16 17 18
+17 18 19 20 21 22 23   22 23 24 25 26 27 28   19 20 21 22 23 24 25
+24 25 26 27 28 29 30   29 30 31               26 27 28 29 30
+ 
+        July                  August                September
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+                1  2       1  2  3  4  5  6                1  2  3
+ 3  4  5  6  7  8  9    7  8  9 10 11 12 13    4  5  6  7  8  9 10
+10 11 12 13 14 15 16   14 15 16 17 18 19 20   11 12 13 14 15 16 17
+17 18 19 20 21 22 23   21 22 23 24 25 26 27   18 19 20 21 22 23 24
+24 25 26 27 28 29 30   28 29 30 31            25 26 27 28 29 30
+31
+         October               November               December
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+                   1          1  2  3  4  5                1  2  3
+ 2  3  4  5  6  7  8    6  7  8  9 10 11 12    4  5  6  7  8  9 10
+ 9 10 11 12 13 14 15   13 14 15 16 17 18 19   11 12 13 14 15 16 17
+16 17 18 19 20 21 22   20 21 22 23 24 25 26   18 19 20 21 22 23 24
+23 24 25 26 27 28 29   27 28 29 30            25 26 27 28 29 30 31
+30 31
+sh-5.0# cal JUN 2005
+      June 2005
+Su Mo Tu We Th Fr Sa
+          1  2  3  4
+ 5  6  7  8  9 10 11
+12 13 14 15 16 17 18
+19 20 21 22 23 24 25
+26 27 28 29 30
+ 
+sh-5.0# bc
+bc 1.07.1
+Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006, 2008, 2012-2017 Free Software
+ Foundation, Inc.
+This is free software with ABSOLUTELY NO WARRANTY.
+For details type `warranty'.
+1+2
+3
+91919191%9
+4
+10*2222222
+22222220
+^C
+(interrupt) Exiting bc.
+sh-5.0# which cal
+/bin/cal
+sh-5.0# which ls
+/bin/ls
+sh-5.0# man grep
+GREP(1)                          User Commands                         GREP(1)
+ 
+NAME
+       grep, egrep, fgrep - print lines that match patterns
+ 
+SYNOPSIS
+       grep [OPTION...] PATTERNS [FILE...]
+       grep [OPTION...] -e PATTERNS ... [FILE...]
+       grep [OPTION...] -f PATTERN_FILE ... [FILE...]
+ 
+DESCRIPTION
+       grep  searches  for  PATTERNS  in  each  FILE.  PATTERNS is one or more
+       patterns separated by newline characters, and  grep  prints  each  line
+       that  matches a pattern.  Typically PATTERNS should be quoted when grep
+       is used in a shell command.
+ 
+       A FILE of “-”  stands  for  standard  input.   If  no  FILE  is  given,
+       recursive  searches  examine  the  working  directory, and nonrecursive
+       searches read standard input.
+   Context Line Control
+       -A NUM, --after-context=NUM
+              Print NUM  lines  of  trailing  context  after  matching  lines.
+              Places  a  line  containing  a  group separator (described under
+              --group-separator) between contiguous groups of  matches.   With
+              the  -o  or  --only-matching  option,  this  has no effect and a
+              warning is given.
+ 
+       -B NUM, --before-context=NUM
+              Print NUM  lines  of  leading  context  before  matching  lines.
+              Places  a  line  containing  a  group separator (described under
+              --group-separator) between contiguous groups of  matches.   With
+              the  -o  or  --only-matching  option,  this  has no effect and a
+              warning is given.
+ 
+       -C NUM, -NUM, --context=NUM
+              Print NUM lines of output context.  Places a line  containing  a
+              group  separator  (described  under  --group-separator)  between
+              contiguous groups of matches.  With the  -o  or  --only-matching
+sh-5.0# man ls
+LS(1)                            User Commands                           LS(1)
+ 
+NAME
+       ls - list directory contents
+ 
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+ 
+DESCRIPTION
+       List  information  about  the FILEs (the current directory by default).
+       Sort entries alphabetically if none of -cftuvSUX nor --sort  is  speci‐
+       fied.
+ 
+       Mandatory  arguments  to  long  options are mandatory for short options
+       too.
+ 
+       -a, --all
+              do not ignore entries starting with .
+ 
+       -A, --almost-all
+              do not list implied . and ..
+ 
+       --author
+              with -l, print the author of each file
+ 
+       -b, --escape
+              print C-style escapes for nongraphic characters
+ 
+   -b, --escape
+              print C-style escapes for nongraphic characters
+ 
+       --block-size=SIZE
+sh-5.0# man --help
+Usage: man [OPTION...] [SECTION] PAGE...
+ 
+  -C, --config-file=FILE     use this user configuration file
+  -d, --debug                emit debugging messages
+  -D, --default              reset all options to their default values
+      --warnings[=WARNINGS]  enable warnings from groff
+ 
+ Main modes of operation:
+  -f, --whatis               equivalent to whatis
+  -k, --apropos              equivalent to apropos
+  -K, --global-apropos       search for text in all pages
+  -l, --local-file           interpret PAGE argument(s) as local filename(s)
+  -w, --where, --path, --location
+                             print physical location of man page(s)
+  -W, --where-cat, --location-cat
+                             print physical location of cat file(s)
+ 
+  -c, --catman               used by catman to reformat out of date cat pages
+  -R, --recode=ENCODING      output source page encoded in ENCODING
+ 
+ Finding manual pages:
+  -L, --locale=LOCALE        define the locale for this particular man search
+  -m, --systems=SYSTEM       use manual pages from other systems
+
+  -S, -s, --sections=LIST    use colon separated section list
+ 
+  -e, --extension=EXTENSION  limit search to extension type EXTENSION
+ 
+  -i, --ignore-case          look for pages case-insensitively (default)
+  -I, --match-case           look for pages case-sensitively
+ 
+      --regex                show all pages matching regex
+      --wildcard             show all pages matching wildcard
+ 
+      --names-only           make --regex and --wildcard match page names only,
+                             not descriptions
+ 
+  -a, --all                  find all matching manual pages
+  -u, --update               force a cache consistency check
+ 
+      --no-subpages          don't try subpages, e.g. 'man foo bar' => 'man
+                             foo-bar'
+ 
+ Controlling formatted output:
+  -P, --pager=PAGER          use program PAGER to display output
+  -r, --prompt=STRING        provide the `less' pager with a prompt
+ 
+  -7, --ascii                display ASCII translation of certain latin1 chars
+  -E, --encoding=ENCODING    use selected output encoding
+      --no-hyphenation, --nh turn off hyphenation
+      --no-justification,                              --nj   turn off justifica
+ -p, --preprocessor=STRING  STRING indicates which preprocessors to run:
+                             e - [n]eqn, p - pic, t - tbl,
+g - grap, r - refer, v - vgrind
+ 
+  -t, --troff                use groff to format pages
+  -T, --troff-device[=DEVICE]   use groff with selected device
+ 
+  -H, --html[=BROWSER]       use elinks or BROWSER to display HTML output
+  -X, --gxditview[=RESOLUTION]   use groff and display through gxditview
+                             (X11):
+                             -X = -TX75, -X100 = -TX100, -X100-12 = -TX100-12
+  -Z, --ditroff              use groff and force it to produce ditroff
+ 
+  -?, --help                 give this help list
+      --usage                give a short usage message
+  -V, --version              print program version
+ 
+Mandatory or optional arguments to long options are also mandatory or optional
+for any corresponding short options.
+ 
+Report bugs to cjwatson@debian.org.
+sh-5.0# history
+    1  uptime
+    2  cal
+    3  cal 2022
+    4  cal JUN 2005
+    5  bc
+    6  which cal
+    7  which ls
+   8  man grep
+    9  man grep | more
+   10  man ls
+   11  man --help
+   12  history
+sh-5.0# exit
+ 
+Script done on 2024-04-09 17:59:13+05:30 [COMMAND_EXIT_CODE="0"]
