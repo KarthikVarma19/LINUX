@@ -1,0 +1,80 @@
+[root@localhost ~]# cat typescript
+Script started on 2024-04-11 18:15:56+05:30 [TERM="linux" TTY="/dev/hvc0" COLUMN
+S="80" LINES="30"]
+sh-5.0# ls
+bench.py  hello.c  typescript
+sh-5.0# gzip -k bench.py
+sh-5.0# ls
+bench.py  bench.py.gz  hello.c  typescript
+sh-5.0# rm bench.py
+sh-5.0# gzip -d bench.py.gz
+sh-5.0# ls
+bench.py  hello.c  typescript
+sh-5.0# gzip -k hello.c
+sh-5.0# ls
+bench.py  hello.c  hello.c.gz  typescript
+sh-5.0# gunzip hello.c.gz
+gzip: hello.c already exists; do you wish to overwrite (y or n)? y
+sh-5.0# ls
+bench.py  hello.c  typescript
+sh-5.0# mkdir newfolder
+sh-5.0# ls
+bench.py  hello.c  newfolder  typescript
+sh-5.0# tar -czf compress.tar.gz newfolder/
+sh-5.0# ls
+bench.py  compress.tar.gz  hello.c  newfolder  typescript
+sh-5.0# ls -ltr
+total 16
+-rw-r--r-- 1 root root 185 Sep  9  2018 hello.c
+-rw-r--r-- 1 root root 114 Dec 26  2020 bench.py
+-rw-r--r-- 1 root root   0 Apr 11 18:15 typescript
+drwxr-xr-x 2 root root  37 Apr 11 18:18 newfolder
+-rw-r--r-- 1 root root 114 Apr 11 18:20 compress.tar.gz
+sh-5.0# tar -xzf compress.tar.gz
+sh-5.0# ls
+bench.py  compress.tar.gz  hello.c  newfolder  typescript
+sh-5.0# rm newfolder/
+rm: cannot remove 'newfolder/': Is a directory
+sh-5.0# rm -rf newfolder/
+sh-5.0# ls
+bench.py  compress.tar.gz  hello.c  typescript
+sh-5.0# tar -xzf compress.tar.gz
+sh-5.0# ls
+bench.py  compress.tar.gz  hello.c  newfolder  typescript
+sh-5.0# rm compress.tar.gz
+sh-5.0# ls
+bench.py  hello.c  newfolder  typescript
+sh-5.0# zip allfiles bench.py hello.c
+  adding: bench.py (deflated 27%)
+  adding: hello.c (deflated 23%)
+sh-5.0# ls
+allfiles.zip  bench.py  hello.c  newfolder  typescript
+sh-5.0# history
+    1  ls
+    2  gzip -k bench.py
+    3  ls
+    4  rm bench.py
+    5  gzip -d bench.py.gz
+    6  ls
+    7  gzip -k hello.c
+    8  ls
+    9  gunzip hello.c.gz
+   10  ls
+   11  mkdir newfolder
+   12  ls
+   13  tar -czf compress.tar.gz newfolder/
+   14  ls
+   15  history
+   16  ls -ltr
+   17  tar -xzf compress.tar.gz
+   18  ls
+   19  rm newfolder/
+   20  rm -rf newfolder/
+   21  ls
+   22  tar -xzf compress.tar.gz
+   23  ls
+   24  rm compress.tar.gz
+   25  ls
+   26  zip allfiles bench.py hello.c
+   27  ls
+   28  history
